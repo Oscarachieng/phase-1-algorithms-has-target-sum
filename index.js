@@ -1,13 +1,31 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let indexI = 0; indexI < array.length; indexI++){
+    for (let indexJ = indexI+1; indexJ < array.length; indexJ++) {
+      let difference = indexI - target;
+      //let sumOfIndices = indexI +indexJ;
+      if (indexJ === target) {
+        return true
+      } else {
+        return false
+      }
+      
+    }
+  }
+  
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
-
+console.log(hasTargetSum([3, 8, 12, 4, 11, 7], 10))
 /* 
   Add your pseudocode here
+  1. For every element in the array,
+   add it to the rest of the elements,
+   check if the result equals the second argument.
+  2.If the sum === second argument, return True else False.
+  3.  
 */
 
 /*
